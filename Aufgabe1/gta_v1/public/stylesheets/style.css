@@ -48,7 +48,7 @@ a {
   color: var(--link-color);
 }
 
-/* ### TODO ### Styles for other HTML elements */
+/*Styles for other HTML elements */
 
 .header__image {
     width: 4rem;
@@ -250,7 +250,7 @@ a {
 }
 
 
-/* ### TODO ### Styles for Footer Component */
+/* Styles for Footer Component */
 
 .footer {
   background: var(--background-color);
