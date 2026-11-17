@@ -57,6 +57,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 3rem;
   flex: 1;
 }
 
@@ -124,17 +125,11 @@ a {
 
 .main {
   display: flex;
-  gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 3rem;
 }
 
 
 /*Styles for Tagging component */
-
-.tagging {
-  flex: 1;
-}
-
 
 #tag-form input:read-only {
   background-color: var(--background-color);
@@ -156,28 +151,17 @@ a {
 
 /* Styles for Discovery component */
 
-.discovery {
-  flex: 2;
-}
-
 #discoveryFilterForm input,
 #discoveryFilterForm button {
   width: var(--form-width);
 }
 
 .discovery__wrapper {
-  display: flex;
-  gap: 2rem;
   margin-top: 2rem;
-}
-
-.discovery__taglist {
-  flex: 1;
 }
 
 .discovery__map {
   display: flex;
-  flex: 2;
   flex-direction: column;
 }
 
@@ -228,7 +212,7 @@ a {
 
 #tag-form fieldset {
   width: 100%;
-  max-width: var(--form-width);;
+  max-width: var(--form-width);
 }
 
 #tag-form fieldset,
@@ -263,14 +247,17 @@ a {
 }
 
 
-
 /* Media Queries */
 
 @media (max-width: 850px) {
-    .main {
+    /* Zeilen (auch die verschachtelte) klappen untereinander */
+    .row {
         flex-direction: column;
+        gap: 2rem;
     }
-    .discovery__wrapper {
-        flex-direction: column;
+
+    /* Spalten nehmen dann die volle Breite ein */
+    [class*="col-"] {
+        width: 100%;
     }
 }
