@@ -32,23 +32,23 @@
 
                     <div class="form-group">
                         <label for="latitude">Latitude:</label>
-                        <input id="latitude" type="number" value="49.0141" readonly>
+                        <input id="latitude" name="latitude" type="number" value="49.0141" readonly>
                     </div>
 
 
                     <div class="form-group">
                         <label for="longitude">Longitude:</label>
-                        <input id="longitude" type="number" value="8.4044" readonly>
+                        <input id="longitude" name="longitude" type="number" value="8.4044" readonly>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input id="name" type="text" placeholder="zB Schloss" maxlength="10" pattern="[A-Za-z]{1,10}"  required>
+                        <input id="name" name="name" type="text" placeholder="zB Schloss" maxlength="10" pattern="[A-Za-z]{1,10}"  required>
                     </div>
 
                     <div class="form-group">
                         <label for="hashtag">Hashtag:</label>
-                        <input id="hashtag" type="text" placeholder="zB #castle" maxlength="11" pattern="#[A-Za-z]{0,10}">
+                        <input id="hashtag" name="hashtag" type="text" placeholder="zB #castle" maxlength="11" pattern="#[A-Za-z]{0,10}">
                     </div>
 
                     <button type="submit">
@@ -70,14 +70,25 @@
                     <legend>Search</legend>
                     <div class="form-group">
 
-                        <label for="search">
+                        <label for="searchterm">
                             Search term or keywords:
                         </label>
                         <input
-                            id="search"
+                            id="searchterm"
                             type="text"
-                            placeholder="e.g. Karlsruhe">
+                            placeholder="e.g. Karlsruhe">  
                     </div>
+                      <input
+                                type="hidden"
+                                id="discovery-latitude"
+                                name="latitude"
+                                value="49.0141">
+
+                            <input
+                                type="hidden"
+                                id="discovery-longitude"
+                                name="longitude"
+                                value="8.4044">
                     <button type="submit">
                         Search
                     </button>
